@@ -68,9 +68,9 @@ drivers)</li>
 <section id="update-history" class="col-sm-12 col-lg-8">
 <h1>Update History</h1>
 <div class="collapse">
-<input type="checkbox" id="collapse-section2" checked aria-hidden="true">
-<label for="collapse-section2" checked aria-hidden="true"><strong>V1.1.0
-/ 05-February-2025</strong></label>
+<input type="checkbox" id="collapse-section3" checked aria-hidden="true">
+<label for="collapse-section3" checked aria-hidden="true"><strong>V1.2.0
+/ 04-June-2025</strong></label>
 <div>
 <h2 id="maintenance-release">Maintenance release</h2>
 <ul>
@@ -79,6 +79,67 @@ STM32U375xx/STM32U385xx devices</li>
 </ul>
 <h2 id="contents">Contents</h2>
 <h3 id="hal-drivers-updates"><strong>HAL Drivers</strong> updates</h3>
+<ul>
+<li><strong>HAL FLASH</strong> driver
+<ul>
+<li>Fix usage of IS_FLASH_SECURE_OPERATION()</li>
+<li>Fix FLASH_WaitForLastOperation timeout issue</li>
+</ul></li>
+<li><strong>HAL GPIO</strong> driver
+<ul>
+<li>Fix Pull down capability missing in analog mode</li>
+</ul></li>
+<li><strong>HAL GTZC</strong> driver
+<ul>
+<li>Add preprocessors for crypto PN</li>
+</ul></li>
+<li><strong>HAL PWR</strong> driver
+<ul>
+<li>Removed SRAM powerdown disable APIs</li>
+<li>Comments enhancement</li>
+</ul></li>
+<li><strong>HAL RCC</strong> driver
+<ul>
+<li>Fix the inversion between RCC_DAC1SHCLKSOURCE_LSE and
+RCC_DAC1SHCLKSOURCE_LSI</li>
+<li>Comments enhancement</li>
+</ul></li>
+</ul>
+<h3 id="ll-drivers-updates"><strong>LL Drivers</strong> updates</h3>
+<ul>
+<li><strong>LL PWR</strong> driver
+<ul>
+<li>Comments enhancement</li>
+</ul></li>
+<li><strong>LL RCC</strong> driver
+<ul>
+<li>Comments enhancement</li>
+</ul></li>
+</ul>
+<h2 id="backward-compatibility">Backward compatibility</h2>
+<ul>
+<li>Not applicable</li>
+</ul>
+<h2 id="known-limitations">Known Limitations</h2>
+<ul>
+<li>Not applicable</li>
+</ul>
+<p><br />
+</p>
+</div>
+</div>
+<div class="collapse">
+<input type="checkbox" id="collapse-section2"  aria-hidden="true">
+<label for="collapse-section2"  aria-hidden="true"><strong>V1.1.0 /
+05-February-2025</strong></label>
+<div>
+<h2 id="maintenance-release-1">Maintenance release</h2>
+<ul>
+<li>Maintenance Release of STM32CubeU3 HAL/LL Drivers supporting
+STM32U375xx/STM32U385xx devices</li>
+</ul>
+<h2 id="contents-1">Contents</h2>
+<h3 id="hal-drivers-updates-1"><strong>HAL Drivers</strong> updates</h3>
 <ul>
 <li><strong>HAL CCB</strong> driver
 <ul>
@@ -138,7 +199,7 @@ delayed.</li>
 command is well completed (FIFO flush)</li>
 </ul></li>
 </ul>
-<h3 id="ll-drivers-updates"><strong>LL Drivers</strong> updates</h3>
+<h3 id="ll-drivers-updates-1"><strong>LL Drivers</strong> updates</h3>
 <ul>
 <li><strong>LL LPUART</strong> driver
 <ul>
@@ -151,11 +212,11 @@ LPUART_PRESCALER_TAB array</li>
 USART_PRESCALER_TAB array</li>
 </ul></li>
 </ul>
-<h2 id="backward-compatibility">Backward compatibility</h2>
+<h2 id="backward-compatibility-1">Backward compatibility</h2>
 <ul>
 <li>Not applicable</li>
 </ul>
-<h2 id="known-limitations">Known Limitations</h2>
+<h2 id="known-limitations-1">Known Limitations</h2>
 <ul>
 <li>Not applicable</li>
 </ul>
@@ -173,7 +234,7 @@ USART_PRESCALER_TAB array</li>
 <li>First Official Release of STM32CubeU3 HAL/LL Drivers supporting
 STM32U375xx/STM32U385xx devices</li>
 </ul>
-<h2 id="contents-1">Contents</h2>
+<h2 id="contents-2">Contents</h2>
 <ul>
 <li>STM32CubeU3 HAL/LL Drivers supporting STM32U375xx/STM32U385xx
 devices :
@@ -193,11 +254,11 @@ SDMMC, SPI, TIM, USART, UTILS</p></li>
 <li>STM32U375xx/STM32U385xx devices</li>
 <li>NUCLEO-U385RG-Q (Rev.E) board</li>
 </ul>
-<h2 id="backward-compatibility-1">Backward compatibility</h2>
+<h2 id="backward-compatibility-2">Backward compatibility</h2>
 <ul>
 <li>Not applicable</li>
 </ul>
-<h2 id="known-limitations-1">Known Limitations</h2>
+<h2 id="known-limitations-2">Known Limitations</h2>
 <ul>
 <li>None</li>
 </ul>
