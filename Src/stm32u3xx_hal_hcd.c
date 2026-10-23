@@ -1871,6 +1871,16 @@ static void HCD_HC_IN_IRQHandler(HCD_HandleTypeDef *hhcd, uint8_t chnum)
   uint8_t phy_chnum = chnum;
   uint8_t ch_num = HAL_HCD_GetLogical_Channel(hhcd, phy_chnum, 1U);
 
+  /* Guard against stale IN interrupt firing after HAL_HCD_HC_Halt().                                                                                                                                              
+  * If logical channel is not registered, xfer_buff is NULL and USB_ReadPMA()                                                                                                                                     
+  * triggers a HardFault. Disable channel RX status                                                                                                                                  
+  * and discard the stale interrupt. */                                                                                                                                                                           
+  if (ch_num == HCD_LOGICAL_CH_NOT_OPENED)                                                                                                                                                                         
+  {                                                                                                                                                                                                                
+    HCD_SET_CH_RX_STATUS(hhcd->Instance, phy_chnum, USB_CH_RX_DIS);                                                                                                                                                
+    return;                                                                                                                                                                                                        
+  } 
+
   /* Take a Flag snapshot from the CHEP register, due to STRX bits are used for both control and status */
   uint32_t ch_reg =  HCD_GET_CHANNEL(hhcd->Instance, phy_chnum);
 
